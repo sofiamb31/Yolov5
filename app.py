@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 import os
 import sys
-
+from PIL import Image
 
 # Configuración de página Streamlit
 st.set_page_config(
