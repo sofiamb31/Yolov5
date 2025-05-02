@@ -7,9 +7,6 @@ import os
 import sys
 
 
-image = Image.open('deteccionobjetos.jpg')
-
-st.image(image,width=300)
 # Configuración de página Streamlit
 st.set_page_config(
     page_title="Detección de Objetos en Tiempo Real",
@@ -70,7 +67,9 @@ Esta aplicación utiliza YOLOv5 para detectar objetos en imágenes capturadas co
 Ajusta los parámetros en la barra lateral para personalizar la detección.
 """)
 
+image = Image.open('deteccionobjetos.jpg')
 
+st.image(image,width=300)
 
 # Cargar el modelo
 with st.spinner("Cargando modelo YOLOv5..."):
