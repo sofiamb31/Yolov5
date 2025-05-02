@@ -66,6 +66,10 @@ Esta aplicación utiliza YOLOv5 para detectar objetos en imágenes capturadas co
 Ajusta los parámetros en la barra lateral para personalizar la detección.
 """)
 
+image = Image.open('deteccionobjetos.jpg')
+
+st.image(image,width=300)
+
 # Cargar el modelo
 with st.spinner("Cargando modelo YOLOv5..."):
     model = load_yolov5_model()
@@ -172,6 +176,14 @@ else:
 
 # Información adicional y pie de página
 st.markdown("---")
+
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #89ac76; /* light blue */
+        }
+    </style>
+""", unsafe_allow_html=True)
 st.caption("""
 **Acerca de la aplicación**: Esta aplicación utiliza YOLOv5 para detección de objetos en tiempo real.
 Desarrollada con Streamlit y PyTorch.
